@@ -17,7 +17,7 @@ install:
   - pip uninstall requests -y
   - pip install requests==2.4.0
 # command to run tests
-script: python linkchecker $site
+script: python ~/virtualenv/python2.7/bin/linkchecker $site
 # do not send emails of broken builds
 notifications:
   email: true
