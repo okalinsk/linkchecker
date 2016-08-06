@@ -13,8 +13,9 @@ addons:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
-  - pip install pyftpdlib pytest-xdist
-  - python setup.py install
+  - pip install pyftpdlib pytest-xdist linkchecker
+  - pip uninstall requests
+  - pip install requests==2.2.0
 # command to run tests
 script: python linkchecker $site
 # do not send emails of broken builds
